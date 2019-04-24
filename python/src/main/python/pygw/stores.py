@@ -9,14 +9,14 @@ Data stores
 """
 
 class RocksDbDs(DataStore):
-    """RocksDB datastore.
-
-    Args:
-        gw_namespace (string): namespace of geowave
-        dir (str): directory of datastore
-
-    """
     def __init__(self, gw_namespace=None, dir="rocksdb", compact_on_write=True, batch_write_size=1000):
+         """RocksDB datastore.
+
+        Args:
+            gw_namespace (string): namespace of geowave
+            dir (str): directory of datastore
+
+        """
         if gw_namespace:
             j_rock_opts = config.MODULE__rocksdb_config.RocksDBOptions(gw_namespace)
         else:
