@@ -43,6 +43,7 @@ class GlobalConfigurations:
                 # Geotools Feature
                 java_import(self.GATEWAY.jvm, "org.geotools.feature")
                 self.MODULE__feature = self.GATEWAY.jvm.org.geotools.feature
+                
                 # Geowave Query Constraints
                 java_import(self.GATEWAY.jvm, "org.locationtech.geowave.core.store.query.constraints")
                 self.MODULE__query_constraints = self.GATEWAY.jvm.org.locationtech.geowave.core.store.query.constraints
