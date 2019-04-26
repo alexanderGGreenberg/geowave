@@ -43,7 +43,7 @@ class GlobalConfigurations:
                 # Geotools Feature
                 java_import(self.GATEWAY.jvm, "org.geotools.feature")
                 self.MODULE__feature = self.GATEWAY.jvm.org.geotools.feature
-                
+
                 # Geowave Query Constraints
                 java_import(self.GATEWAY.jvm, "org.locationtech.geowave.core.store.query.constraints")
                 self.MODULE__query_constraints = self.GATEWAY.jvm.org.locationtech.geowave.core.store.query.constraints
@@ -59,6 +59,11 @@ class GlobalConfigurations:
                 # Geowave Geotime Util
                 java_import(self.GATEWAY.jvm, "org.locationtech.geowave.core.geotime.util")
                 self.MODULE__geotime_util = self.GATEWAY.jvm.org.locationtech.geowave.core.geotime.util
+
+                ### Java date methods ###
+                java_import(self.GATEWAY.jvm, "java.util.text.SimpleDateFormat")
+                self.MODULE__simple_date_format= config.GATEWAY.jvm.java.util.text.SimpleDateFormat
+
 
 # Note - Module-wide Singleton!
 global config
