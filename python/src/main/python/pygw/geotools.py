@@ -68,9 +68,15 @@ class SimpleFeatureBuilder(PyGwJavaWrapper):
         self._java_ref.set(attr.descriptor, j_geom)
 
     def _set_date(self, attr, value):
+<<<<<<< HEAD
         # TODO
         # Thoughts for this: Python date -> String -> Java Date from String
         pass
+=======
+        assert isinstance(value, tuple)
+        j_date = config.MODULE__util.Date(value[0], value[1], value[2])
+        self._java_ref.set(attr.descriptor, j_date)
+>>>>>>> bcce3b6a743... Make docs look good, and basic date implementation
 
     def build(self, id):
         j_feature = self._java_ref.buildFeature(str(id))

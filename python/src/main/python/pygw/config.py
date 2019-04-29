@@ -60,6 +60,14 @@ class GlobalConfigurations:
                 java_import(self.GATEWAY.jvm, "org.locationtech.geowave.core.geotime.util")
                 self.MODULE__geotime_util = self.GATEWAY.jvm.org.locationtech.geowave.core.geotime.util
 
+<<<<<<< HEAD
+=======
+                ### Java util methods ###
+                java_import(self.GATEWAY.jvm, "java.util.")
+                self.MODULE__util= config.GATEWAY.jvm.java.util
+
+
+>>>>>>> bcce3b6a743... Make docs look good, and basic date implementation
 # Note - Module-wide Singleton!
 global config
 config = GlobalConfigurations()
